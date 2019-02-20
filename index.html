@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Volume Estimator</title>
+ 
+
+</head>
+
+<body>
+  <main class="container-fluid">
+
+    <h1>Volume Estimator</h1>
+  
+    
+    <p>Enter Length:
+      <input id="length" type="number" >
+    </p>
+
+    <p>Enter Width:
+      <input id="width" type="number" >
+    </p>
+    <p>Enter Height:
+          
+        <input id="height" type="number" >
+      </p>
+    
+    <button id="clicker" class="btn btn-primary" onclick="">Calculate Volume</button>
+
+    <p id="result"></p>
+
+  </main>
+
+  <script>
+    console.log('SCRIPT START')
+    console.log('Declare testable functions.....................')
+    function volumeesti(length,width,height) {
+      return length*width*height
+    }
+    console.log('Defined volumeesti=' + volumeesti)
+    console.log('Declare event listeners .......................')
+    document.getElementById('clicker').addEventListener('click', function () {
+  
+      const length = parseInt(document.getElementById('length').value)
+      console.log('i=' + length)
+      const width = parseInt(document.getElementById('width').value)
+      console.log('j=' + width)
+      const height = parseInt(document.getElementById('height').value)
+      console.log('j=' + height)
+      const ans ="volume of material (l*w*h): "+volumeesti(length,width,height)
+      document.getElementById('result').innerHTML = ans
+    })
+    console.log('SCRIPT END')
+  </script>
+
+</body>
+
+</html>
